@@ -30,7 +30,7 @@ DTBO_IMG=$KERNEL_DIR/out/arch/arm64/boot/dtbo.img
 NAME="Realme"
 
 git submodule update --init --recursive
-git clone https://github.com/dodyirawan85/AnyKernel3.git -b inc-dtbo
+git clone https://github.com/ngel123/any3.git 
 git clone https://github.com/silont-project/silont-clang.git --depth=1
 
 # Build kernel
