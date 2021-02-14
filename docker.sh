@@ -108,7 +108,7 @@ LOG_DEBUG=0
 
 ## Set defaults first
 DISTRO=$(cat /etc/issue)
-KBUILD_BUILD_HOST=Laptop-Sangar
+KBUILD_BUILD_HOST=Draconic
 CI_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 export KBUILD_BUILD_HOST CI_BRANCH
 ## Check for CI
