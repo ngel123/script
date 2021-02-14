@@ -59,8 +59,26 @@ INCREMENTAL=1
 PTTG=1
 	if [ $PTTG = 1 ]
 	then
-		# Set Telegram Chat ID
-		CHATID="-1001453284272"
+		CHATIDQ="-1001453284272"
+CHATID="-1001453284272" # Group/channel chatid (use rose/userbot to get it)
+TELEGRAM_TOKEN="1267549536:AAEfCc6b1o-5X5pDa48l_8aFkLOSS7AnzZo" #from botfather
+# Export Telegram.sh
+TELEGRAM_FOLDER="${HOME}"/telegram
+if ! [ -d "${TELEGRAM_FOLDER}" ]; then
+    git clone https://github.com/fabianonline/telegram.sh/ "${TELEGRAM_FOLDER}"
+fi
+
+TELEGRAM="${TELEGRAM_FOLDER}"/telegram
+
+tg_cast() {
+    "${TELEGRAM}" -t "${TELEGRAM_TOKEN}" -c "${CHATID}" -H \
+    "$(
+		for POST in "${@}"; do
+			echo "${POST}"
+		done
+    )"
+}
+
 	fi
 
 # Generate a full DEFCONFIG prior building. 1 is YES | 0 is NO(default)
