@@ -36,13 +36,13 @@ err() {
 KERNEL_DIR=$PWD
 
 # The name of the Kernel, to name the ZIP
-ZIPNAME="SiLonT-TEST"
+ZIPNAME="Irb"
 
 # The name of the device for which the kernel is built
-MODEL="Redmi Note 5 Pro"
+MODEL="Device"
 
 # The codename of the device
-DEVICE="whyred"
+DEVICE="android"
 
 # The defconfig which should be used. Get it from config.gz from
 # your device or check source
